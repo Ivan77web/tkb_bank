@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТКБ Банк</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <img class="navbar_logo" src="https://www.tkbbank.ru/images/logo-30.svg" />
+
+            <ul>
+                <li>Вклады</li>
+                <li>Кредиты</li>
+                <li>Карты</li>
+                <li>Ипотека</li>
+                <li>Еще</li>
+            </ul>
+
+            <div>
+                <p>О банке</p>
+                <p>Онлайн-сервисы</p>
+                <div class="phone-logo"></div>
+            </div>
+        </nav>
+
+        <!-- <div class="sidebar">
+            
+        </div> -->
+
+        <main class="main">
+            <div class="main_table">
+                <span class="main_table-header-item">ФИО</span>
+                <span class="main_table-header-item">Должность</span>
+                <span class="main_table-header-item">Возраст</span>
+                <span class="main_table-header-item">Компетенции</span>
+                <span class="main_table-header-item"></span>
+
+                <div class="main_table-item">
+                    <input placeholder="Имя" id="main_input-name" class="input" />
+                </div>
+
+                <div class="main_table-item">
+                    <select id="main_input-post" class="select">
+                        <option value="1">Аналитик</option>
+                        <option value="2">Менеджер</option>
+                        <option value="3">Программист</option>
+                        <option value="4">Юрист</option>
+                    </select>
+                </div>
+
+                <div class="main_table-item">
+                    <input placeholder="Возраст" id="main_input-age" class="input" oninput="checkNumber(this)" />
+                </div>
+
+                <div class="main_table-item">
+                    <input placeholder="Компетенции" id="main_input-competencies" class="input input-competencies" />
+                </div>
+
+                <div class="main_table-item">
+                    <button class="main_btn-add btn">
+                        Добавить
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            footer
+        </footer>
+    </div>
+</body>
+<script src="./main.js"></script>
+
+</html>

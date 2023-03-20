@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 70px auto 50px;
+    grid-template-areas:"sidebar navbar"
+                        "sidebar main"
+                        "sidebar footer";
+    height: 100vh;
+}
+
+.navbar{
+    grid-area: navbar;
+    background: #8a8f94;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background: #dbf1f4;
+}
+
+.sidebar_logo{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+.main{
+    grid-area: main;
+    overflow-y: scroll;   
+}
+
+.main_table{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr .5fr;
+    width: 90%;
+    margin: 50px auto;
+    border: 2px solid black;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.main_table-header-item{
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.main_table-item{
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.footer{
+    grid-area: footer;
+    background: #8a8f94;
+}
+
+.btn{
+    width: 80px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: transparent;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.input{
+    width: 140px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: transparent;
+    padding: 5px;
+}
+
+.select{
+    width: 152px;
+    height: 32px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: transparent;
+    padding: 5px;
+}
+
+.input-competencies{
+    width: 95%;
+}
