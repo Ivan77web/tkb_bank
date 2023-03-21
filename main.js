@@ -5,7 +5,14 @@ const main_input_post = document.getElementById('main_input-post');
 const main_input_age = document.getElementById('main_input-age');
 const main_input_competencies = document.getElementById('main_input-competencies');
 
-let users = [];
+let users = [
+    {
+        name: 'Шестопалов Иван',
+        post: 'Программист',
+        age: '20',
+        competencies: 'HTML5, CSS3, SCSS (адаптивная верстка), JavaScript, React, TypeScript, WebRTC, Redux, Redux-toolkit, Framer Motion, NextJS, MobX, Webpack, Babel, FSD архитектура, i18n, Линтеры (EsLint, Stylelint), Storybook, Тесты (React Testing Library, Jest, Loki), Huski',
+    },
+];
 
 main_btn_add.addEventListener('click', () => {
     const validateErrors = validateData();
@@ -88,6 +95,7 @@ const redrawing = () => {
         const actions = document.createElement('div');
         const deleteBtn = document.createElement('button');
         deleteBtn.innerHTML = 'Удалить';
+        deleteBtn.classList.add('btn')
         deleteBtn.onclick = () => deleteUser(i);
         actions.append(deleteBtn);
         actions.classList.add('main_table-item', 'main_table-user');
@@ -129,6 +137,10 @@ const validateData = () => {
 const checkNumber = (e) => {
     const value = e.value;
     e.value = value.replace(/\D/g, '');
+}
+
+const sendData = () => {
+    console.log(JSON.stringify(users));
 }
 
 redrawing();

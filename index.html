@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <title>ТКБ Банк</title>
     <link rel="stylesheet" href="./style.css" />
 </head>
@@ -12,69 +17,244 @@
 <body>
     <div class="wrapper">
         <nav class="navbar">
-            <img class="navbar_logo" src="https://www.tkbbank.ru/images/logo-30.svg" />
+            <div class="container">
+                <img class="navbar_logo" src="https://www.tkbbank.ru/images/logo-30.svg" />
 
-            <ul>
-                <li>Вклады</li>
-                <li>Кредиты</li>
-                <li>Карты</li>
-                <li>Ипотека</li>
-                <li>Еще</li>
-            </ul>
+                <ul class="navbar_list">
+                    <li class="navbar_list-item">
+                        <a class="navbar_text" href="https://www.tkbbank.ru/private/savings/deposit/" target="_blank">
+                            Вклады
+                        </a>
+                    </li>
+                    <li class="navbar_list-item">
+                        <a class="navbar_text" href="https://www.tkbbank.ru/private/credits/consumer/" target="_blank">
+                            Кредиты
+                        </a>
+                    </li>
+                    <li class="navbar_list-item">
+                        <a class="navbar_text" href="https://www.tkbbank.ru/private/cards/" target="_blank">
+                            Карты
+                        </a>
+                    </li>
+                    <li class="navbar_list-item">
+                        <a class="navbar_text" href="https://www.tkbbank.ru/private/credits/mortgage/" target="_blank">
+                            Ипотека
+                        </a>
+                    </li>
+                    <li class="navbar_list-item">
+                        <a class="navbar_text" href="#">
+                            Еще
+                        </a>
+                    </li>
+                </ul>
 
-            <div>
-                <p>О банке</p>
-                <p>Онлайн-сервисы</p>
-                <div class="phone-logo"></div>
+                <div class="navbar_contacts">
+                    <a href="https://www.tkbbank.ru/bank/about/" target="_blank">
+                        <p class="navbar_text">О банке</p>
+                    </a>
+                    <div class="navbar_btn-services">Онлайн-сервисы</div>
+                    <div class="navbar_contact-logo">
+                        <a href="https://www.tkbbank.ru/feedback/?utm_feedbaback=form" target="_blank">
+                            <img class="navbar_contact-logo-img" src="https://www.tkbbank.ru/ico/ico-mail.svg" />
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav>
 
-        <!-- <div class="sidebar">
-            
-        </div> -->
-
         <main class="main">
-            <div class="main_table">
-                <span class="main_table-header-item">ФИО</span>
-                <span class="main_table-header-item">Должность</span>
-                <span class="main_table-header-item">Возраст</span>
-                <span class="main_table-header-item">Компетенции</span>
-                <span class="main_table-header-item"></span>
+            <div class="table-wrapper">
+                <div class="main_table">
+                    <span class="main_table-header-item">ФИО</span>
+                    <span class="main_table-header-item">Должность</span>
+                    <span class="main_table-header-item">Возраст</span>
+                    <span class="main_table-header-item">Компетенции</span>
+                    <span class="main_table-header-item"></span>
 
-                <div class="main_table-item">
-                    <input placeholder="Имя" id="main_input-name" class="input" />
-                </div>
+                    <div class="main_table-item">
+                        <input placeholder="Имя" id="main_input-name" class="input" />
+                    </div>
 
-                <div class="main_table-item">
-                    <select id="main_input-post" class="select">
-                        <option value="1">Аналитик</option>
-                        <option value="2">Менеджер</option>
-                        <option value="3">Программист</option>
-                        <option value="4">Юрист</option>
-                    </select>
-                </div>
+                    <div class="main_table-item">
+                        <select id="main_input-post" class="select">
+                            <option value="1">Аналитик</option>
+                            <option value="2">Менеджер</option>
+                            <option value="3">Программист</option>
+                            <option value="4">Юрист</option>
+                        </select>
+                    </div>
 
-                <div class="main_table-item">
-                    <input placeholder="Возраст" id="main_input-age" class="input" oninput="checkNumber(this)" />
-                </div>
+                    <div class="main_table-item">
+                        <input placeholder="Возраст" id="main_input-age" class="input" oninput="checkNumber(this)" />
+                    </div>
 
-                <div class="main_table-item">
-                    <input placeholder="Компетенции" id="main_input-competencies" class="input input-competencies" />
-                </div>
+                    <div class="main_table-item">
+                        <input placeholder="Компетенции" id="main_input-competencies" class="input input-competencies" />
+                    </div>
 
-                <div class="main_table-item">
-                    <button class="main_btn-add btn">
-                        Добавить
-                    </button>
+                    <div class="main_table-item">
+                        <button class="main_btn-add btn">
+                            Добавить
+                        </button>
+                    </div>
                 </div>
+            </div>
+
+            <div>
+                <button class="main_btn-send" onclick="sendData()">
+                    Отправить
+                </button>
             </div>
         </main>
 
         <footer class="footer">
-            footer
+            <div class="container">
+                <div class="footer_logo-block">
+                    <img class="footer_logo" src="https://www.tkbbank.ru/images/logo-30.svg" />
+
+                    <p class="footer_small-dark-text">Для бесплатных звонков на территории России</p>
+
+                    <div class="footer_phone-block">
+                        <span class="footer_phone-text"><strong>+7 800 100 32 00 </strong></span>
+                        <span class="footer_opacity-text">- для частных лиц</span>
+                    </div>
+
+                    <p class="footer_small-dark-text">Для звонков из любой точки мира по тарифам вашего оператора связи</p>
+
+                    <div class="footer_phone-block">
+                        <span class="footer_phone-text"><strong>+7 495 777 41 50 </strong></span>
+                        <span class="footer_opacity-text">- для частных лиц</span>
+                    </div>
+                </div>
+
+                <div class="footer_links-block">
+                    <div class="footer_services">
+                        <p>
+                            <a class="footer_header-text" href="https://www.tkbbank.ru/" target="_blank">
+                                <h5 class="footer_header-text">Финансовые услуги</h5>
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/">
+                                Личные финансы
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/business/">
+                                Малому бизнесу
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/corporate/">
+                                Крупным компаниям
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/realization/">
+                                Другие услуги
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="footer_about">
+                        <p>
+                            <a class="footer_header-text" href="https://www.tkbbank.ru/bank/about/" target="_blank">
+                                <h5 class="footer_header-text">О банке</h5>
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/bank/disclosure/">
+                                Раскрытие информации 
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/bank/disclosure_of_securities_market/">
+                                Раскрытие информации профессионального участника рынка ценных бумаг
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/predstavitel/">
+                                Представитель владельцев облигаций
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/bank/job/">
+                                Карьера в банке
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/bank/contacts/">
+                                Контакты и реквизиты
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="footer_center">
+                        <p>
+                            <a class="footer_header-text" href="https://www.tkbbank.ru/bank/press/" target="_blank">
+                                <h5 class="footer_header-text">Пресс-центр</h5>
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/bank/press/news/">
+                                Новости банка
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/bank/press/publisher/">
+                                Публикации в СМИ
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://e-disclosure.ru/portal/company.aspx?id=1475&attempt=1">
+                                Центр раскрытия <br /> корпоративной информации
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="footer_information">
+                        <p>
+                            <a class="footer_header-text" href="https://www.tkbbank.ru/info/tenders/" target="_blank">
+                                <h5 class="footer_header-text">Полезная информация</h5>
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/info/tenders/">
+                                Тендерный комитет
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/private/credits/all/partners/">
+                                Партнерам
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/bank/documents/">
+                                Документы
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/info/valuation-companies/">
+                                Оценочные компании
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://www.tkbbank.ru/foreigntaxpayers/">
+                                Информация по идентификации иностранных налогоплательщиков
+                            </a>
+                        </p>
+                        <p class="footer_opacity-link">
+                            <a class="footer_opacity-link" target="_blank" href="https://fincult.info/">
+                                Информационно-просветительский портал Банка России «Финансовая культура»
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 </body>
 <script src="./main.js"></script>
+<script src="./animateNavbar.js"></script>
 
 </html>
